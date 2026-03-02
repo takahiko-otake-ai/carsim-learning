@@ -1,0 +1,41 @@
+.heroBanner {
+  padding: 2.5rem 0 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem 1rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.2rem;
+}
+
+.versionBanner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 0;
+}
+
+.features {
+  padding: 1.5rem 0 3rem;
+}
+
+.featureLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.featureLink:hover {
+  text-decoration: none;
+  color: inherit;
+}

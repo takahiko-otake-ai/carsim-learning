@@ -1,0 +1,432 @@
+:root {
+  --ifm-color-primary: #1a73e8;
+  --ifm-color-primary-dark: #1666d1;
+  --ifm-color-primary-darker: #1560c5;
+  --ifm-color-primary-darkest: #114fa2;
+  --ifm-color-primary-light: #2e80eb;
+  --ifm-color-primary-lighter: #3a87ec;
+  --ifm-color-primary-lightest: #5d9df0;
+  --ifm-code-font-size: 95%;
+  --ifm-font-family-base: 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans JP',
+    sans-serif;
+  --ifm-background-color: #ffffff;
+  --ifm-font-color-base: #222222;
+  --ifm-heading-color: #111111;
+  --ifm-navbar-background-color: #333333;
+  --ifm-navbar-link-color: #ffffff;
+  --ifm-navbar-link-hover-color: #a0c4ff;
+  --ifm-footer-background-color: #333333;
+  --ifm-footer-color: #cccccc;
+  --ifm-footer-link-color: #cccccc;
+  --ifm-footer-link-hover-color: #ffffff;
+  --ifm-font-size-base: 15px;
+  --ifm-line-height-base: 1.65;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #5a9cf5;
+  --ifm-color-primary-dark: #3b89f3;
+  --ifm-color-primary-darker: #2c7ff2;
+  --ifm-color-primary-darkest: #0d66e0;
+  --ifm-color-primary-light: #79aff7;
+  --ifm-color-primary-lighter: #88b8f8;
+  --ifm-color-primary-lightest: #b6d5fb;
+  --ifm-background-color: #1a1a2e;
+  --ifm-navbar-background-color: #1a1a1a;
+  --ifm-footer-background-color: #1a1a1a;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* ── Navbar (gray top bar) ── */
+.navbar {
+  box-shadow: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  height: 48px;
+  padding: 0 1rem;
+}
+
+.navbar__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar__title {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.navbar__logo img {
+  height: 26px;
+}
+
+.navbar__link {
+  font-size: 0.84rem;
+  font-weight: 500;
+  padding: 0.35rem 0.65rem;
+}
+
+.navbar__item.dropdown .navbar__link::after {
+  border-color: rgba(255, 255, 255, 0.5) transparent transparent;
+}
+
+.dropdown__menu {
+  background: #ffffff;
+  border: 1px solid #e0e4ea;
+  border-radius: 4px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown__menu .dropdown__link {
+  color: #222222;
+  font-size: 0.84rem;
+}
+
+.dropdown__menu .dropdown__link:hover {
+  background: #f5f7fa;
+  color: #1a73e8;
+}
+
+.navbar .navbar__items--right a[href="https://www.carsim.com/"] {
+  background: #1a73e8;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 5px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.navbar .navbar__items--right a[href="https://www.carsim.com/"]:hover {
+  background: #1560c5;
+  color: #ffffff;
+}
+
+/* ── Hero (white bg, gray accent) ── */
+.hero--carsim {
+  background: #f5f7fa;
+  color: #111111;
+  padding: 2.5rem 0 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid #e0e4ea;
+}
+
+.hero--carsim .hero__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 0.4rem;
+}
+
+.hero--carsim .hero__subtitle {
+  font-size: 1rem;
+  color: #555555;
+  max-width: 540px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+.hero--carsim .button--carsim {
+  background: #1a73e8;
+  border: none;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 9px 26px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.hero--carsim .button--carsim:hover {
+  background: #1560c5;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+[data-theme='dark'] .hero--carsim {
+  background: #222233;
+  border-bottom-color: #333355;
+}
+
+[data-theme='dark'] .hero--carsim .hero__title {
+  color: #e0e6ed;
+}
+
+[data-theme='dark'] .hero--carsim .hero__subtitle {
+  color: #a0aec0;
+}
+
+/* ── Info box ── */
+.carsim-infobox {
+  background: #f0f3f7;
+  border-left: 4px solid #1a73e8;
+  padding: 0.85rem 1.2rem;
+  margin: 1.2rem 0;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.88rem;
+  color: #333333;
+  line-height: 1.65;
+}
+
+[data-theme='dark'] .carsim-infobox {
+  background: #1a2233;
+  color: #c0c8d4;
+  border-left-color: #5a9cf5;
+}
+
+/* ── Feature cards ── */
+.feature-card {
+  background: #ffffff;
+  border: 1px solid #e0e4ea;
+  border-radius: 6px;
+  padding: 1.4rem;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  height: 100%;
+}
+
+.feature-card:hover {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  border-color: #1a73e8;
+}
+
+.feature-card h3 {
+  color: #111111;
+  font-size: 1.02rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.feature-card p {
+  color: #555555;
+  font-size: 0.86rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+[data-theme='dark'] .feature-card {
+  background: #222233;
+  border-color: #333355;
+}
+
+[data-theme='dark'] .feature-card:hover {
+  border-color: #5a9cf5;
+}
+
+[data-theme='dark'] .feature-card h3 {
+  color: #e0e6ed;
+}
+
+[data-theme='dark'] .feature-card p {
+  color: #a0aec0;
+}
+
+/* ── Download button ── */
+.carsim-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #1a73e8;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 9px 20px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0.3rem 0.5rem 0.3rem 0;
+  transition: background 0.2s;
+}
+
+.carsim-btn::before {
+  content: '\2193';
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.carsim-btn:hover {
+  background: #1560c5;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* ── Markdown typography ── */
+.markdown h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 1rem;
+}
+
+.markdown h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #111111;
+  margin-top: 2rem;
+  margin-bottom: 0.7rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #e8ecf1;
+}
+
+.markdown h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111111;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+[data-theme='dark'] .markdown h1,
+[data-theme='dark'] .markdown h2,
+[data-theme='dark'] .markdown h3 {
+  color: #e0e6ed;
+}
+
+[data-theme='dark'] .markdown h2 {
+  border-bottom-color: #333355;
+}
+
+.markdown p {
+  color: #333333;
+  line-height: 1.7;
+}
+
+[data-theme='dark'] .markdown p {
+  color: #c0c8d4;
+}
+
+.markdown a {
+  color: #1a73e8;
+}
+
+.markdown a:hover {
+  text-decoration: underline;
+}
+
+/* ── Sidebar ── */
+.menu__link {
+  font-size: 0.86rem;
+  color: #333333;
+  border-radius: 4px;
+}
+
+.menu__link:hover {
+  background: #f5f7fa;
+  color: #1a73e8;
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  border-left: 3px solid #1a73e8;
+  padding-left: calc(var(--ifm-menu-link-padding-horizontal) - 3px);
+  background: #edf2fc;
+  color: #1a73e8;
+  font-weight: 600;
+}
+
+.menu__list-item-collapsible .menu__link {
+  font-weight: 600;
+  color: #111111;
+  font-size: 0.84rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+[data-theme='dark'] .menu__link {
+  color: #c0c8d4;
+}
+
+[data-theme='dark'] .menu__link:hover {
+  background: #2a2a44;
+  color: #5a9cf5;
+}
+
+[data-theme='dark'] .menu__link--active:not(.menu__link--sublist) {
+  background: #1a2233;
+  color: #5a9cf5;
+  border-left-color: #5a9cf5;
+}
+
+/* ── Admonitions ── */
+.alert--info {
+  --ifm-alert-background-color: #f0f3f7;
+  --ifm-alert-border-color: #1a73e8;
+  --ifm-alert-foreground-color: #333333;
+}
+
+/* ── Tables ── */
+.markdown table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.87rem;
+}
+
+.markdown table th {
+  background: #f5f7fa;
+  color: #111111;
+  font-weight: 600;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid #e0e4ea;
+  text-align: left;
+}
+
+.markdown table td {
+  padding: 0.5rem 0.9rem;
+  border: 1px solid #e0e4ea;
+  color: #333333;
+}
+
+.markdown table tr:nth-child(even) {
+  background: #fafbfc;
+}
+
+[data-theme='dark'] .markdown table th {
+  background: #2a2a44;
+  color: #e0e6ed;
+  border-color: #333355;
+}
+
+[data-theme='dark'] .markdown table td {
+  border-color: #333355;
+  color: #c0c8d4;
+}
+
+/* ── Footer ── */
+.footer--dark {
+  --ifm-footer-background-color: #333333;
+}
+
+.footer__title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
+.footer__link-item {
+  font-size: 0.83rem;
+}
+
+.footer__copyright {
+  font-size: 0.76rem;
+  opacity: 0.6;
+  margin-top: 1.5rem;
+}
+
+/* ── Pagination ── */
+.pagination-nav__link {
+  border-color: #e0e4ea;
+  border-radius: 6px;
+  transition: border-color 0.2s;
+}
+
+.pagination-nav__link:hover {
+  border-color: #1a73e8;
+}
+
+/* ── Content width ── */
+@media (min-width: 997px) {
+  [class*='docItemCol'] {
+    max-width: 75% !important;
+  }
+}
