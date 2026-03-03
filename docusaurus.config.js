@@ -11,10 +11,10 @@ const config = {
     v4: true,
   },
 
-  url: 'https://your-org.github.io',
+  url: 'https://takahiko-otake-ai.github.io',
   baseUrl: '/carsim-learning/',
 
-  organizationName: 'your-org',
+  organizationName: 'takahiko-otake-ai',
   projectName: 'carsim-learning',
 
   onBrokenLinks: 'warn',
