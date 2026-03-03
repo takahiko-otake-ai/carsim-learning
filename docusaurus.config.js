@@ -28,6 +28,19 @@ const config = {
     },
   },
 
+  themes: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      ({
+        hashed: true,
+        language: ['ja', 'en'],
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+      }),
+    ],
+  ],
+
   presets: [
     [
       'classic',
@@ -82,10 +95,6 @@ const config = {
           },
           {
             type: 'localeDropdown',
-            position: 'right',
-          },
-          {
-            type: 'search',
             position: 'right',
           },
           {
