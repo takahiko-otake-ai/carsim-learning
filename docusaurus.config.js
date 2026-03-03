@@ -94,6 +94,11 @@ const config = {
             position: 'left',
           },
           {
+            to: '/videos',
+            label: '動画',
+            position: 'left',
+          },
+          {
             type: 'localeDropdown',
             position: 'right',
           },

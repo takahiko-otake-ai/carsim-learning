@@ -1,0 +1,317 @@
+.videosPage {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.pageTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 0.4rem;
+}
+
+.pageDescription {
+  font-size: 0.95rem;
+  color: #555555;
+  margin-bottom: 1.5rem;
+}
+
+/* Category filter */
+.filterBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.filterButton {
+  padding: 6px 16px;
+  border: 1px solid #d0d5dd;
+  border-radius: 20px;
+  background: #ffffff;
+  color: #333333;
+  font-size: 0.84rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.filterButton:hover {
+  border-color: #1a73e8;
+  color: #1a73e8;
+}
+
+.filterButtonActive {
+  background: #1a73e8;
+  border-color: #1a73e8;
+  color: #ffffff;
+}
+
+.filterButtonActive:hover {
+  background: #1560c5;
+  border-color: #1560c5;
+  color: #ffffff;
+}
+
+/* Video grid */
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Video card */
+.videoCard {
+  border: 1px solid #e0e4ea;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ffffff;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.videoCard:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-color: #1a73e8;
+}
+
+.thumbnailArea {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: #1b1b2f;
+  overflow: hidden;
+}
+
+.playOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.25);
+  transition: background 0.2s;
+}
+
+.videoCard:hover .playOverlay {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.playIcon {
+  width: 56px;
+  height: 56px;
+  background: rgba(26, 115, 232, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.videoCard:hover .playIcon {
+  transform: scale(1.1);
+}
+
+.playTriangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 18px;
+  border-color: transparent transparent transparent #ffffff;
+  margin-left: 3px;
+}
+
+.durationBadge {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.cardBody {
+  padding: 0.85rem 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardCategory {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #1a73e8;
+  margin-bottom: 0.3rem;
+}
+
+.cardTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111111;
+  margin: 0 0 0.3rem;
+  line-height: 1.35;
+}
+
+.cardDescription {
+  font-size: 0.82rem;
+  color: #555555;
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+
+.noUrl {
+  font-size: 0.78rem;
+  color: #888888;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.modalContent {
+  width: 100%;
+  max-width: 960px;
+  background: #111111;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: #1a1a1a;
+}
+
+.modalTitle {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.modalClose {
+  background: none;
+  border: none;
+  color: #aaaaaa;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+  transition: color 0.15s;
+}
+
+.modalClose:hover {
+  color: #ffffff;
+}
+
+.modalVideo {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+
+.modalVideo iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Empty state */
+.emptyState {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #888888;
+}
+
+.emptyState p {
+  font-size: 0.95rem;
+}
+
+/* Dark mode */
+:global([data-theme='dark']) .pageTitle {
+  color: #f0f4f8;
+}
+
+:global([data-theme='dark']) .pageDescription {
+  color: #94a3b8;
+}
+
+:global([data-theme='dark']) .filterButton {
+  background: #1e1e32;
+  border-color: #3b3b5c;
+  color: #cbd5e1;
+}
+
+:global([data-theme='dark']) .filterButton:hover {
+  border-color: #6db3f8;
+  color: #6db3f8;
+}
+
+:global([data-theme='dark']) .filterButtonActive {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #ffffff;
+}
+
+:global([data-theme='dark']) .videoCard {
+  background: #1e1e32;
+  border-color: #3b3b5c;
+}
+
+:global([data-theme='dark']) .videoCard:hover {
+  border-color: #6db3f8;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+:global([data-theme='dark']) .cardCategory {
+  color: #6db3f8;
+}
+
+:global([data-theme='dark']) .cardTitle {
+  color: #f0f4f8;
+}
+
+:global([data-theme='dark']) .cardDescription {
+  color: #94a3b8;
+}
+
+:global([data-theme='dark']) .noUrl {
+  color: #64748b;
+}
+
+@media (max-width: 640px) {
+  .videoGrid {
+    grid-template-columns: 1fr;
+  }
+}

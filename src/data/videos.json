@@ -1,0 +1,65 @@
+[
+  {
+    "id": "overview",
+    "title": "CarSim 概要紹介",
+    "description": "CarSim の基本コンセプトと主要な活用ケースを紹介します。",
+    "category": "getting-started",
+    "duration": "",
+    "url": "",
+    "relatedDocs": ["/docs/getting-started/installation"]
+  },
+  {
+    "id": "first-sim",
+    "title": "最初のシミュレーション実行",
+    "description": "CarSim GUI の起動からシミュレーション結果の確認までの一連の操作を解説します。",
+    "category": "getting-started",
+    "duration": "",
+    "url": "",
+    "relatedDocs": ["/docs/getting-started/first-simulation"]
+  },
+  {
+    "id": "vehicle-setup",
+    "title": "車両モデルのセットアップ",
+    "description": "Vehicle Assembly 画面でのパラメータ設定方法を解説します。",
+    "category": "basic",
+    "duration": "",
+    "url": "",
+    "relatedDocs": ["/docs/basic/vehicle-model"]
+  },
+  {
+    "id": "road-definition",
+    "title": "道路・路面の定義",
+    "description": "Segment Builder やパス設定を用いた道路環境の構築方法を紹介します。",
+    "category": "simulation",
+    "duration": "",
+    "url": "",
+    "relatedDocs": ["/docs/simulation/roads-terrain"]
+  },
+  {
+    "id": "adas-scenario",
+    "title": "ADAS シナリオの構築",
+    "description": "Moving Objects と ADAS センサを組み合わせた ADAS テストシナリオの作成手順です。",
+    "category": "simulation",
+    "duration": "",
+    "url": "",
+    "relatedDocs": ["/docs/test-cases/adas-tests"]
+  },
+  {
+    "id": "simulink-integration",
+    "title": "Simulink 連携の手順",
+    "description": "CarSim S-Function ブロックを用いた MATLAB/Simulink との連携設定を解説します。",
+    "category": "advanced",
+    "duration": "",
+    "url": "",
+    "relatedDocs": ["/docs/advanced/simulink-integration"]
+  },
+  {
+    "id": "results-analysis",
+    "title": "結果の可視化と分析",
+    "description": "VS Visualizer でのアニメーション・プロット操作と結果比較の方法を紹介します。",
+    "category": "simulation",
+    "duration": "",
+    "url": "",
+    "relatedDocs": ["/docs/simulation/results-visualization"]
+  }
+]
